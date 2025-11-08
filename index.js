@@ -15,7 +15,7 @@ const options = {
 		'x-rapidapi-host': 'twitter-trends5.p.rapidapi.com',
 		'Content-Type': 'application/x-www-form-urlencoded'
 	},
-	body: new URLSearchParams({ woeid: '23424977' })
+	body: new URLSearchParams({ woeid: '23424934' })  // Philippines WOEID
 };
 
 let graphData = [];
@@ -25,7 +25,8 @@ fetch(url, options)
 	.then(data => {
 		console.log(data)
 
-		for (let i = 0; i < 15; i++) {
+		// Get top 20 trends
+		for (let i = 0; i < 20; i++) {
 			graphData.push(
 				{
 					"name": data.trends[i].name,
@@ -48,8 +49,6 @@ fetch(url, options)
 		})
 
 		console.log(volumes);
-
-
 
 		const myChart = document.getElementById('myChart');
 
@@ -97,34 +96,7 @@ fetch(url, options)
 			}
 		});
 	})
-
-//Dummy data to comment out
-
-// let myPost = {
-//         name: "Lee Sung Kyung",
-//         queryUrl: "search?q=%22Lee+Sung+Kyung%22",
-//         volume: 31799,
-//         followers: 3895734
-//     }
-
-//     console.log(myPost);
-//     console.log(myPost.name);
-//     console.log(myPost.queryUrl);
-//     console.log(myPost.volume);
-//     console.log(myPost.followers);
-
-//  let graphData = [
-//         {name: "#PorDeeReunion", queryUrl: "search?q=%23PorDeeReunion", volume: 67000},
-//         {name: "#BGYO3rdAnniversary", queryUrl: "search?q=%23BGYO3rdAnniversary", volume: 27400}
-//     ];
-
-// console.log(graphData);
-// console.log(graphData[1]);
-// console.log(graphData[1].name);
-
-// graphData.push(myPost);
-// console.log(graphData);
-
-
-
-//code to paste in fetch
+	.catch(error => {
+		console.error('Error fetching trends:', error);
+	});
+	
