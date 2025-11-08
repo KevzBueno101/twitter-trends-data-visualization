@@ -1,15 +1,9 @@
-console.log("Hello");
-
 const dateElement = document.getElementById('date');
-
-console.log("dateElement")
-
 let currentDate = new Date();
-console.log(currentDate);
 
 dateElement.innerHTML = currentDate;
 
-let dateOptions = { year: 'numeric', month: 'long', day: 'numeric'};
+let dateOptions = { year: 'numeric', month: 'short', day: 'numeric'};
 
 dateElement.innerHTML = currentDate.toLocaleDateString('en-US', dateOptions); 
 
@@ -31,7 +25,7 @@ fetch(url, options)
 .then(data => {
 	console.log(data)
 
-	for (let i = 0; i < 25; i++){
+	for (let i = 0; i < 15; i++){
 		graphData.push(
 				{
 					"name": data.trends[i].name,

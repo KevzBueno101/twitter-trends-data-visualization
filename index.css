@@ -11,8 +11,8 @@ footer {
         padding: 10px;
     }
 
-.fa-globe, .fa-facebook, .fa-twitter, .fa-instagram, .fa-tiktok, .fa-youtube {
-        font-size: 25px;
+.fa-globe, .fa-facebook, .fa-twitter, .fa-instagram, .fa-tiktok, .fa-youtube, .fa-brands {
+        font-size: 15px;
         color: white;
         margin: 0 10px 0 10px;
     }
