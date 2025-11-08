@@ -15,7 +15,7 @@ const options = {
 		'x-rapidapi-host': 'twitter-trends5.p.rapidapi.com',
 		'Content-Type': 'application/x-www-form-urlencoded'
 	},
-	body: new URLSearchParams({ woeid: '23424934' })  // Philippines WOEID
+	body: new URLSearchParams({ woeid: '23424977' })  
 };
 
 let graphData = [];
